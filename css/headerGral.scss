@@ -1,0 +1,7 @@
+@mixin headerGral {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $back_color;
+    height: $heightHeader;
+    margin: $marginGral;
+}

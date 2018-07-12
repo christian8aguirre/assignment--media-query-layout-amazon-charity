@@ -1,0 +1,5 @@
+@mixin sizeSecuring ($widthImg,$heightSecuring){
+    width: $widthImg;
+    height: $heightSecuring;
+    align-self: flex-end;
+}

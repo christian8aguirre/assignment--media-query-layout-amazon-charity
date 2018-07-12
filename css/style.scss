@@ -1,0 +1,80 @@
+@import "./css/var";
+@import "./css/headerGral";
+@import "./css/containerImgGral";
+@import "./css/sizeAmazon";
+@import "./css/sizeSecuring";
+
+header{
+    @include headerGral;
+    
+    .amazon{
+        @include sizeAmazon(30%,50%);
+    }
+    .securing{
+        @include sizeSecuring(30%,50%);
+    }
+}
+
+section{
+    
+    margin: $marginBody;
+    h1{
+        color: $colorSection;
+        font-family: $titleFont;
+    }
+    p{
+        font-family: $bodyFont;
+        font-size: $fontSizeGral;
+        line-height: $lineheight;
+    }
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__img{
+            @include containerImgGral($percentWidthImg);
+            img{
+                width: $percentImg;
+            }
+            p{
+                width: $percentImg;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+
+    section{
+        .container{
+            &__img{
+                 @include containerImgGral(47%);
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width:560px){
+    header{
+        flex-direction: column;
+        .amazon{
+            @include sizeAmazon(70%,50%);
+            align-self: center;
+        }
+        .securing{
+            @include sizeSecuring(70%,50%);
+            align-self: center;
+        }
+    }
+
+    section{
+        .container{
+            &__img{
+                 @include containerImgGral(95%);
+
+            }
+        }
+    }
+}

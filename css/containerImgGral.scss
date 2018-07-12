@@ -1,0 +1,9 @@
+@mixin containerImgGral($percentWidthImg){
+    border: $borderImg;
+    padding: $paddingImg;
+    margin: $marginImg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: $percentWidthImg;
+}

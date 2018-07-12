@@ -1,0 +1,5 @@
+@mixin sizeAmazon($widthImg, $heightAmazon){
+    width: $widthImg;
+    height: $heightAmazon;
+    align-self: center;
+}
